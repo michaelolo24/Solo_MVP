@@ -1,0 +1,52 @@
+{
+  "name": "AgoraU",
+  "version": "1.0.0",
+  "description": "Comprehensive education application",
+  "author": "Michael Olorunnisola <michael.olorunnisola@gmail.com>",
+  "license": "ISC",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "webpack-dev-server --progress --inline",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "*",
+    "bcrypt-nodejs": "*",
+    "bluebird": "*",
+    "body-parser": "^1.15.2",
+    "express": "*",
+    "jquery": "*",
+    "jwt-simple": "*",
+    "lodash": "*",
+    "mongoose": "*",
+    "morgan": "^1.7.0",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "react-router": "*",
+    "react-router-redux": "*",
+    "redux": "*",
+    "request": "*",
+    "youtube-api-search": "*"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "chai": "^3.5.0",
+    "sinon": "^1.17.3",
+    "chai-jquery": "^2.0.0",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*",
+    "webpack-dev-middleware": "*",
+    "webpack-hot-middleware": "*"
+  },
+  "engines": {
+    "node": "6.x"
+  }
+}
