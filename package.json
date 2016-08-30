@@ -6,9 +6,8 @@
   "license": "ISC",
   "main": "index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "start": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "babel-preset-stage-1": "*",
@@ -16,8 +15,8 @@
     "bluebird": "*",
     "body-parser": "^1.15.2",
     "express": "*",
+    "express-partial": "^0.1.0",
     "jquery": "*",
-    "jwt-simple": "*",
     "lodash": "*",
     "mongoose": "*",
     "morgan": "^1.7.0",
@@ -26,6 +25,7 @@
     "react-redux": "*",
     "react-router": "*",
     "react-router-redux": "*",
+    "react-transform": "0.0.3",
     "redux": "*",
     "request": "*",
     "youtube-api-search": "*"
@@ -35,16 +35,12 @@
     "babel-loader": "*",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
-    "chai": "^3.5.0",
-    "sinon": "^1.17.3",
-    "chai-jquery": "^2.0.0",
-    "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
     "react-addons-test-utils": "*",
     "webpack": "*",
     "webpack-dev-server": "*",
     "webpack-dev-middleware": "*",
-    "webpack-hot-middleware": "*"
+    "webpack-hot-middleware": "*",
+    "webpack-livereload-plugin": "^0.8.2"
   },
   "engines": {
     "node": "6.x"

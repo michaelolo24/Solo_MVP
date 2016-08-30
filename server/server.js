@@ -1,10 +1,19 @@
-var express = require('express');
-var mongoose = require('mongoose');
+const path = require('path');
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const config = require('../webpack.config.js');
+const express = require('express');
 
-var app = express();
+const appServer = express();
+const compiler = webpack(config);
 
-mongoose.connect('mongodb://localhost/agora');
+appServer.use(express.static(__dirname));
+appServer.use(webpackMiddleware(compiler));
+appServer.use(webpackHotMiddleware(compiler));
+appServer.get('*', function response(req, res) {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
 
-app.listen(3000);
 
-module.exports = app;
+module.exports = appServer;
