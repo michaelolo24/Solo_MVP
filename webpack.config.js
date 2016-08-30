@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    //'webpack-hot-middleware/client',
+    'webpack-hot-middleware/client',
     './app/index.jsx'
   ],
   output: {
@@ -12,7 +12,7 @@ module.exports = {
   },
   watch: true,
   plugins: [
-    //new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     preLoaders: [
@@ -35,7 +35,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
-    //historyApiFallback: true,
-    //contentBase: './'
+    historyApiFallback: true,
+    contentBase: './'
   }
 };
