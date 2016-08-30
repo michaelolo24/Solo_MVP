@@ -6,7 +6,7 @@
   "license": "ISC",
   "main": "index.jsx",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
     "express": "*",
     "express-partial": "^0.1.0",
     "jquery": "*",
+    "jshint": "^2.9.3",
+    "jshint-loader": "^0.8.3",
     "lodash": "*",
     "mongoose": "*",
     "morgan": "^1.7.0",
@@ -35,10 +37,11 @@
     "babel-loader": "*",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
+    "babel-preset-react-hmre": "^1.1.1",
     "react-addons-test-utils": "*",
     "webpack": "*",
-    "webpack-dev-server": "*",
     "webpack-dev-middleware": "*",
+    "webpack-dev-server": "*",
     "webpack-hot-middleware": "*",
     "webpack-livereload-plugin": "^0.8.2"
   },

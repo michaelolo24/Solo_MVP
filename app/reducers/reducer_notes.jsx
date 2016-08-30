@@ -1,7 +1,8 @@
-
-function () {
+const NotesReducer = () => {
   return [
-    {title: 'My First Note'},
-    {title: 'My Second Note'}
-  ]
-}
+    {id: 1, name:'My First Note'},
+    {id: 2, name:'My Second Note'}
+  ];
+};
+
+export default NotesReducer;

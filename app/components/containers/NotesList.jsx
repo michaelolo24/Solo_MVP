@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class NotesList extends Component {
-
+class NotesList extends Component {
   createList() {
-    return this.props.notes.map(note => {
-      return <li key={ note.id } className="saved-notes-li"> { note.name } </li>
+    return this.props.notes.map((note) => {
+      return (
+        <li key={ note.id } className="saved-notes-li"> { note.name } </li>
+      );
     })
   }
 
@@ -15,5 +17,13 @@ export default class NotesList extends Component {
       </ul>
     );
   };
-
 }
+
+function mapStateToProps(state) {
+  //What is returned here will show up as props in our list container
+  return {
+    notes: state.notes
+  };
+}
+
+export default connect(mapStateToProps)(NotesList);

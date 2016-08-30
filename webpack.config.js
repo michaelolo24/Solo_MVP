@@ -2,12 +2,12 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client',
-    '../app/index.jsx'
+    './app/index.jsx',
+    'webpack-hot-middleware/client'
   ],
   output: {
     path: __dirname,
-    publicPath: '/',
+    publicPath: '/dist/',
     filename: 'bundle.js'
   },
   watch: true,
